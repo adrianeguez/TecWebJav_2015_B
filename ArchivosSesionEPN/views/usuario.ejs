@@ -1,8 +1,0 @@
-<h1>Sus Datos son: <%- req.session.user.usuario %>  </h1>
-
-<h2>Subir foto</h2>
-<img src="images/<%- req.session.user.url %>">
-<form action="Usuarios/subirFoto" enctype="multipart/form-data" method="post">
-    <input type="file" name="perfil">
-    <input type="submit" value="Submit">
-</form>
