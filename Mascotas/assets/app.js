@@ -1,4 +1,7 @@
-var applicacion = angular.module('app', ['ui.router']);
+
+
+
+var applicacion = angular.module('app', ['ui.router','ngAnimate']);
 
 applicacion.config(function ($stateProvider, $urlRouterProvider) {
 
@@ -48,3 +51,7 @@ applicacion.config(function ($stateProvider, $urlRouterProvider) {
 
 
 });
+
+
+
+

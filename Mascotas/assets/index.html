@@ -2,10 +2,10 @@
 <html>
 
 <head>
-
+    <link rel="stylesheet" href="lib/css/animate.css">
 </head>
 
-<body ng-app="app" ng-init="visible=true">
+<body class="animated bounce" ng-app="app" ng-init="visible=true">
     <ul>
         <li><a href="#/cuenta">cuenta</a></li>
         <li><a href="#/home">home</a></li>
@@ -15,21 +15,24 @@
     <button ng-click="visible=!visible">Mostrar/Ocultar</button>
 
 
-    <div ui-view>
+    <div class="animated fadeInLeftBig" ui-view>
         
     </div>
     
+    
+    
+    
     <div>
-        <div ui-view="home">
+        <div class="animated fadeInRightBig" ui-view="home">
             
         </div>        
     </div>
     <div ng-show="visible">
-        <div ui-view="datos">
+        <div class="animated fadeInRightBig" ui-view="datos">
         </div>        
     </div>
     <div>
-        <div ui-view="lista">
+        <div class="animated fadeInRightBig" ui-view="lista">
         </div>        
     </div>
     
@@ -40,6 +43,8 @@
 
     <!--     DEPENDENCIAS ANGULAR-->
     <script src="lib/angular-ui-router.js"></script>
+    
+    <script src="lib/angular-animate.js"></script>
 
     <!--     APLICACION-->
     <script src="app.js"></script>
