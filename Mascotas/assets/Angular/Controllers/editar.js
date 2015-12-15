@@ -23,26 +23,6 @@ applicacion.controller('editarcontroller',['$scope','$timeout',function($scope,$
 
 
 
-            Entrenador
-            
-            nombre:
-            apellido:
-            fechaNacimiento:
-            
-            
-            Mascota
-
-            nombre:
-
-
-
-
-
-
-
-
-
-
 
 
 
