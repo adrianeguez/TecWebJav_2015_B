@@ -3,21 +3,59 @@
 
 <head>
     <link rel="stylesheet" href="lib/css/animate.css">
+    <link rel="stylesheet" href="lib/css/bootstrap.min.css">
 </head>
 
 <body class="animated bounce" ng-app="app" ng-init="visible=true">
-    <ul>
-        <li><a href="#/cuenta">cuenta</a></li>
-        <li><a href="#/home">home</a></li>
-        <li><a href="#/usuario">usuario</a></li>
-    </ul>
+    <div class="container">
+        
+        <!--        ROW 2 - VISTA -->        
+        <div class="row">
+            <div class="animated bounceIn" ui-view>
+        
+            </div>
+        </div>
+        
+<!--        ROW 1 - NAVEGACION -->
+        <div class="row">
+        <h1>Navegacion</h1>
+        <ul>
+            <li><a href="#/cuenta">cuenta</a></li>
+            <li><a href="#/home">home</a></li>
+            <li><a href="#/usuario">usuario</a></li>
+        </ul>
+        </div>
+
+        
     
+    </div>
+    
+        
+<!--
     <button ng-click="visible=!visible">Mostrar/Ocultar</button>
 
 
-    <div class="animated fadeInLeftBig" ui-view>
-        
+    
+    
+    
+    
+    
+    <div>
+        <div class="animated fadeInRightBig" ui-view="home">
+            
+        </div>        
     </div>
+    <div ng-show="visible">
+        <div class="animated fadeInRightBig" ui-view="datos">
+        </div>        
+    </div>
+    <div>
+        <div class="animated fadeInRightBig" ui-view="lista">
+        </div>        
+    </div><button ng-click="visible=!visible">Mostrar/Ocultar</button>
+
+
+    
     
     
     
@@ -35,6 +73,7 @@
         <div class="animated fadeInRightBig" ui-view="lista">
         </div>        
     </div>
+-->
     
 
 
