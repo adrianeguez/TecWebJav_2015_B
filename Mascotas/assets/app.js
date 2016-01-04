@@ -1,7 +1,7 @@
 
 
 
-var applicacion = angular.module('app', ['ui.router','ngAnimate']);
+var applicacion = angular.module('app', ['ui.router','ngAnimate','ngResource']);
 
 applicacion.config(function ($stateProvider, $urlRouterProvider) {
 
