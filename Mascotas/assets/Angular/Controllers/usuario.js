@@ -113,24 +113,24 @@ applicacion.controller('usuariocontroller',['$scope','$http','EntrenadorFactory'
             
         }
         
-        EntrenadorFactory.actualizar({
-            idEntrenador: entrenador.id
-        },
-        {
-        nombre: entrenador.nombre,
-        apellido: entrenador.apellido,
-        fechaNacimiento: fecha
-        }).$promise.then(
-        function correctoLlamoEntrenadores(respuesta){
-            
-             console.log(respuesta);
-            $scope.entrenadores[indice].fechaNacimiento=fecha;
-            
-            
-        },
-        function errorNoLlamoEntrenadores(error){
-            console.log(error);
-        });
+        EntrenadorFactory.actualizar(
+            {
+                idEntrenador: entrenador.id
+            },
+            {
+                nombre: entrenador.nombre,
+                apellido: entrenador.apellido,
+                fechaNacimiento: fecha
+            }).$promise.then(
+                function correctoLlamoEntrenadores(respuesta){
+                    console.log(respuesta);
+                    $scope.entrenadores[indice].fechaNacimiento=fecha;            
+                },
+                function errorNoLlamoEntrenadores(error){
+                    console.log(error);
+                });
+        
+        
         
 //        $http({
 //            method:'PUT',

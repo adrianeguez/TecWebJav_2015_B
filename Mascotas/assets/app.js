@@ -33,6 +33,19 @@ applicacion.config(function ($stateProvider, $urlRouterProvider) {
             templateUrl: "Angular/Rutas/usuario.html",
             controller: 'usuariocontroller'
         })
+    
+    
+    
+    
+        .state('mascotas', {
+            url: "/mascotas/:idEntrenador",
+            templateUrl: "Angular/Rutas/mascotas.html",
+            controller: 'MascotasController'
+        })
+    
+    
+    
+    
         .state('cuenta', {
             url: "/cuenta",
             templateUrl: "Angular/Rutas/cuenta.html",
