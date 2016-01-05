@@ -18,6 +18,10 @@ module.exports = {
             },
             fechaNacimiento:{
                 type:'date'
+            },
+            mascotas:{
+                collection: 'mascota',
+                via: 'idEntrenador'
             }
       
 

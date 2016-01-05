@@ -21,38 +21,36 @@ applicacion.factory('EntrenadorFactory',['$resource',function($resource){
     
     return factory;
     
-    
-    
-//    return {
-//        save:function(){
-//            return usuarioGuardado
-//        },
-//        delete:function(){
-//            return usuarioBorrado
-//        },
-//        actualizar: function(){
-//            return usuarioBorrado
-//        },
-//        buscarPorID: function(id){
-//            return usuarioBorrado
-//        },
-//        buscarPorNombre: function(nombre){
-//            return usuarioBorrado
-//        }
-//    }
-    
-    
-    
-    
-    
-    
-    
-    
 }]);
 
 
 
 
+applicacion.factory('MascotaFactory',['$resource',function($resource){
+    var factory = $resource(
+        'http://localhost:1337/Mascota/:idMascota',
+    {
+        idMascota:'@idMascota'
+    },
+         {
+          actualizar: 
+            {
+                method:'PUT', 
+                params:{
+                    idMascota:'@idMascota'
+                }
+            },
+         busquedaPorIdEntrenador: 
+            {
+                url:'http://localhost:1337/Mascota?idEntrenador=:idEntrenador',
+                method:'PUT', 
+                params:{
+                    idEntrenador:'@idEntrenador'
+                }
+            }
+         });
+    return factory;
+}]);
 
 
 
