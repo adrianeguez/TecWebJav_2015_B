@@ -43,10 +43,11 @@ applicacion.factory('MascotaFactory',['$resource',function($resource){
          busquedaPorIdEntrenador: 
             {
                 url:'http://localhost:1337/Mascota?idEntrenador=:idEntrenador',
-                method:'PUT', 
+                method:'GET', 
                 params:{
                     idEntrenador:'@idEntrenador'
-                }
+                },
+                isArray:true
             }
          });
     return factory;

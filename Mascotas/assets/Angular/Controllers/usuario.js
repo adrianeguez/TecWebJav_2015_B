@@ -3,7 +3,9 @@
 
 
 
-applicacion.controller('usuariocontroller',['$scope','$http','EntrenadorFactory',function($scope, $http, EntrenadorFactory){
+applicacion.controller('usuariocontroller',['$scope','$http','EntrenadorFactory','toastr',function($scope, $http, EntrenadorFactory,toastr){
+    
+    toastr.info('Info', 'Se cargo la vista Usuario');
     
 //    $scope.nombrePersonal = "Pepito";
     
@@ -22,6 +24,7 @@ applicacion.controller('usuariocontroller',['$scope','$http','EntrenadorFactory'
         })
         .$promise.then(
         function correctoLlamoEntrenadores(respuesta){
+            toastr.success('Exito', 'Se registro el usuario: '+respuesta.nombre);
             console.log(respuesta);
             //$scope.entrenadores.push(respuesta.data);
             $scope.entrenadores.push(respuesta);
@@ -72,7 +75,7 @@ applicacion.controller('usuariocontroller',['$scope','$http','EntrenadorFactory'
     EntrenadorFactory.query().$promise.then(        
         function correctoLlamoEntrenadores(respuesta){
              console.log(respuesta);
-            
+            toastr.success('Exito', 'Se recobraron: '+respuesta.length+' Entrenadores');
             // $scope.entrenadores = respuesta.data;
             $scope.entrenadores = respuesta;
             
@@ -80,6 +83,7 @@ applicacion.controller('usuariocontroller',['$scope','$http','EntrenadorFactory'
         },
         function errorNoLlamoEntrenadores(error){
             console.log(error);
+            toastr.error('Error', 'Error inesperado del servidor');
         });
     /*$http({
         method:'GET',

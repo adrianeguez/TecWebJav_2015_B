@@ -1,6 +1,6 @@
-
-
-<h1>Mascotas del Usuario : {{usuario.nombre}}</h1>
+<div class="container">
+    
+    <h1>Mascotas del Usuario : {{usuario.nombre}}</h1>
 
 
 
@@ -8,13 +8,28 @@
 
 Regresar a lista de usuarios: <a href="#/usuario">Volver</a></h2>
 
+<h1>1) Forma con el Factory Entrenador</h1>
 <h2>Lista Mascotas</h2>
 
 <div ng-repeat="mascota in usuario.mascotas">
-    <p>Nombre e ID: {{mascota.id}}) {{mascota.nombre}}</p>
-    <p>Alias: {{mascota.alias}}</p>
+    <h3>Llamamos a usuario.mascotas.id <br> Nombre e ID: {{mascota.id}}) {{mascota.nombre}}</h3>
+    <h3>Llamamos a usuario.mascotas.alias <br> Alias: {{mascota.alias}}</h3>
 
 </div>
+
+    
+    <h1>2) Forma con el Factory Mascota</h1>
+<h2>Lista Mascotas</h2>
+
+<div ng-repeat="mascota in mascotas">
+    <h3>Llamamos a mascotas.id <br>Nombre e ID: {{mascota.id}}) {{mascota.nombre}}</h3>
+    <h3>Llamamos a mascotas.alias <br> Alias: {{mascota.alias}}</h3>
+
+</div>
+    
+    
+</div>
+
 
 
 

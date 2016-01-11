@@ -1,6 +1,6 @@
 
 
-applicacion.controller('MascotasController',['$scope','$stateParams','EntrenadorFactory',function($scope, $stateParams, EntrenadorFactory){
+applicacion.controller('MascotasController',['$scope','$stateParams','EntrenadorFactory','MascotaFactory',function($scope, $stateParams, EntrenadorFactory, MascotaFactory){
     
     
     console.log('Parametro Id Entrenador');
@@ -9,8 +9,21 @@ applicacion.controller('MascotasController',['$scope','$stateParams','Entrenador
     
     
     $scope.parametroIdEntrenador = $stateParams.idEntrenador;
-    
-    
+    //CONTROLADOR MASCOTA.JS
+    MascotaFactory.busquedaPorIdEntrenador(
+        {
+            idEntrenador:$stateParams.idEntrenador
+        }).$promise.then(
+        function success(respuesta)
+        {
+            $scope.mascotas = respuesta; 
+            console.log('Llegaron las Mascotas');
+            console.log(respuesta);
+        },
+        function error(error)
+        {
+            console.log(error);
+        });
     
     $scope.existeUsuario = false;
     
