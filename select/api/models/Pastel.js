@@ -8,6 +8,17 @@
 module.exports = {
 
   attributes: {
+      nombre:{
+          type:'string'
+      },
+      masa:{
+          type:'string',
+          enum:['suave','dura','entera']
+      },
+       ingredientesPastel:{
+            collection: 'pastelingrediente',
+            via: 'IdPastel'
+        }
 
   }
 };

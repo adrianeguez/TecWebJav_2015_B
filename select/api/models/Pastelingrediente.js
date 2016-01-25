@@ -8,6 +8,13 @@
 module.exports = {
 
   attributes: {
+      
+      IdPastel:{
+            model:'pastel'
+        },
+      IdIngrediente:{
+            model:'ingrediente'
+        }
 
   }
 };

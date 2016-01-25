@@ -1,0 +1,44 @@
+<html>
+
+    <head>
+        
+    </head>
+    <body ng-app='pastel' ng-controller="pastelCtrl">
+        
+        <h1>Buscar</h1>
+        
+        <label>Por todos: <input ng-model="search.$"></label> <br>
+<label>Solo por Nombre: <input ng-model="search.nombre"></label><br>
+<label>Solo por Masa: <input ng-model="search.masa"></label><br>
+        <label>Solo por ID: <input ng-model="search.id"></label><br>
+        
+        <h2>Pasteles</h2>
+        
+        <div ng-repeat="pastel in pasteles | filter:search">
+            <h3>{{pastel.nombre}}</h3>
+            <h3>ID:{{pastel.id}}</h3>
+            <h3>Masa:{{pastel.masa}}</h3>
+        </div>
+        
+        
+        
+        
+        
+        <h2>Ingredientes</h2>
+        <select ng-model="ingselect">
+            <option value="">Escoja un ingrediente</option>
+            <option ng-repeat="ingrediente in ingredientes" value="{{ingrediente.id}}">{{ingrediente.nombre}}</option>
+
+            
+        </select>
+        
+        {{ingselect}}
+        
+        
+        <script type="text/javascript" src="Libreria/angular.js"></script>
+        
+        
+        <script type="text/javascript" src="js/app.js"></script>
+    
+    </body>
+</html>

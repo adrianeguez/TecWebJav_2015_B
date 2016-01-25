@@ -10,7 +10,11 @@ module.exports = {
   attributes: {
       nombre:{
           type:'string'
-      }
+      },
+       ingredientesPastel:{
+            collection: 'pastelingrediente',
+            via: 'IdIngrediente'
+        }
 
   }
 };
